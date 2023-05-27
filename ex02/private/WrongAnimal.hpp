@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcourtoi <mcourtoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 23:49:50 by mcourtoi          #+#    #+#             */
-/*   Updated: 2023/05/27 11:46:53 by mcourtoi         ###   ########.fr       */
+/*   Updated: 2023/05/27 11:43:20 by mcourtoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
 # ifndef DEBUG
 #  define DEBUG 0
@@ -19,7 +19,7 @@
 
 # include <string>
 
-class Animal 
+class WrongAnimal 
 {
 protected :
 
@@ -27,17 +27,17 @@ protected :
 
 public :
 	
-	Animal(std::string const type);
-	Animal(Animal const &src);
-	Animal(void);
-	~Animal(void);
+	WrongAnimal(std::string const type);
+	WrongAnimal(WrongAnimal const &src);
+	WrongAnimal(void);
+	~WrongAnimal(void);
 	
 	std::string	get_type(void) const;
 	
-	void			set_type(std::string const type);
-	virtual void	makeSound(void) const;
+	void		set_type(std::string const type);
+	void		makeSound(void) const;
 
-	Animal		&operator=(Animal const &src);
+	WrongAnimal		&operator=(WrongAnimal const &src);
 };
 
 #endif

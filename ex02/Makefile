@@ -6,7 +6,7 @@
 #    By: mcourtoi <mcourtoi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/24 23:20:21 by mcourtoi          #+#    #+#              #
-#    Updated: 2023/05/27 11:41:38 by mcourtoi         ###   ########.fr        #
+#    Updated: 2023/05/27 13:05:06 by mcourtoi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ RM			=	rm -rf
 ######################################
 #             EXECUTABLE             #
 ######################################
-NAME		=	Animal
+NAME		=	AAnimal
 
 #######################################
 #             DIRECTORIES             #
@@ -35,11 +35,12 @@ PRV_DIR		=	private
 ######################################
 SRC			=						\
 				${addprefix class/,	\
-					Animal.cpp		\
+					AAnimal.cpp		\
 					Cat.cpp			\
 					Dog.cpp			\
 					WrongAnimal.cpp	\
 					WrongCat.cpp	\
+					Brain.cpp		\
 				}					\
 				main.cpp
 

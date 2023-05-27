@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcourtoi <mcourtoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 23:49:50 by mcourtoi          #+#    #+#             */
-/*   Updated: 2023/05/27 11:46:53 by mcourtoi         ###   ########.fr       */
+/*   Updated: 2023/05/27 13:08:38 by mcourtoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef AANIMAL_HPP
+# define AANIMAL_HPP
 
 # ifndef DEBUG
 #  define DEBUG 0
@@ -19,7 +19,7 @@
 
 # include <string>
 
-class Animal 
+class AAnimal 
 {
 protected :
 
@@ -27,17 +27,17 @@ protected :
 
 public :
 	
-	Animal(std::string const type);
-	Animal(Animal const &src);
-	Animal(void);
-	~Animal(void);
+	AAnimal(std::string const type);
+	AAnimal(AAnimal const &src);
+	AAnimal(void);
+	virtual ~AAnimal(void);
 	
-	std::string	get_type(void) const;
+	std::string		get_type(void) const;
 	
 	void			set_type(std::string const type);
-	virtual void	makeSound(void) const;
+	virtual void	makeSound(void) const = 0;
 
-	Animal		&operator=(Animal const &src);
+	AAnimal			&operator=(AAnimal const &src);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mcourtoi <mcourtoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 23:56:54 by mcourtoi          #+#    #+#             */
-/*   Updated: 2023/05/27 00:26:12 by mcourtoi         ###   ########.fr       */
+/*   Updated: 2023/05/27 11:43:33 by mcourtoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ Cat::~Cat(void)
 
 // makeSound //
 
-void		Cat::makeSound(void)
+void		Cat::makeSound(void) const
 {
 	if (DEBUG)
 		std::cout << "makeSound() member function called\n";

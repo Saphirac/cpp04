@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcourtoi <mcourtoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/27 00:16:22 by mcourtoi          #+#    #+#             */
-/*   Updated: 2023/05/27 11:47:14 by mcourtoi         ###   ########.fr       */
+/*   Created: 2023/05/27 11:37:02 by mcourtoi          #+#    #+#             */
+/*   Updated: 2023/05/27 12:55:17 by mcourtoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#include "Cat.hpp"
+#include "Dog.hpp"
+#include "WrongCat.hpp"
+#include <iostream>
 
-# include "Animal.hpp"
-
-class Dog : public Animal
+int main()
 {
-public :
+	Animal	*meta[100];
+	size_t	i = 0;
 
-	Dog(void);
-	Dog(std::string const &type);
-	Dog(Dog const &src);
+	for ( ; i < 50; i++)
+		meta[i] = new Cat();
+	for ( ; i < 100; i++)
+		meta[i] = new Dog();
+	for (i = 0; i < 100; i++)
+		meta[i]->makeSound();
+	
+	for (i = 0; i < 100; i++)
+		delete meta[i];
 
-	~Dog(void);
-
-	virtual void	makeSound(void) const;
-
-	Dog		&operator=(Dog const &src);
-};
-
-#endif
+	return 0;
+}

@@ -1,78 +1,67 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcourtoi <mcourtoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 23:56:54 by mcourtoi          #+#    #+#             */
-/*   Updated: 2023/05/27 11:43:29 by mcourtoi         ###   ########.fr       */
+/*   Updated: 2023/05/27 13:03:53 by mcourtoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "Cat.hpp"
 #include <iostream>
 
 // constructors and destructor //
 
-Animal::Animal(std::string const type) :
-_type(type)
+Cat::Cat(void) :
+AAnimal("Cat"),
+_brain(new Brain)
 {
 	if (DEBUG)
-		std::cout << "Animal constructor called\n";
+		std::cout << "Cat constructor called\n";
 }
 
-Animal::Animal(Animal const &src) :
-_type(src._type)
+Cat::Cat(std::string const &type) :
+AAnimal(type),
+_brain(new Brain)
 {
 	if (DEBUG)
-		std::cout << "Animal copy constructor called\n";
+		std::cout << "Cat constructor called\n";
 }
 
-Animal::Animal(void) :
-_type ("Default")
+Cat::Cat(Cat const &src) :
+AAnimal(src),
+_brain(new Brain(*src._brain))
 {
 	if (DEBUG)
-		std::cout << "Animal constructor called\n";
+		std::cout << "Cat copy constructor called\n";
 }
 
-Animal::~Animal(void)
+
+Cat::~Cat(void)
 {
 	if (DEBUG)
-		std::cout << "Animal destructor called\n";
-}
-
-// getter and setter //
-
-std::string	Animal::get_type(void) const
-{
-	if (DEBUG)
-		std::cout << "get_type() member function called\n";
-	return this->_type;
-}
-
-void		Animal::set_type(std::string const type)
-{
-	if (DEBUG)
-		std::cout << "set_type() member function called\n";
-	this->_type = type;
+		std::cout << "Cat destructor called\n";
+	delete this->_brain;
 }
 
 // makeSound //
 
-void		Animal::makeSound(void) const
+void		Cat::makeSound(void) const
 {
 	if (DEBUG)
 		std::cout << "makeSound() member function called\n";
-	std::cout << "* Random animal sound. *\n";
+	std::cout << "* Miaou miaou miaou *\n";
 }
 
 // Operator //
 
-Animal		&Animal::operator=(Animal const &src)
+Cat		&Cat::operator=(Cat const &src)
 {
 	if (DEBUG)
-		std::cout << "Copy assignment operator called\n";
+		std::cout << "Cat copy assignment operator called\n";
 	if (this != &src)
 		this->_type = src._type;
 	return *this;

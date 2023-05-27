@@ -1,33 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcourtoi <mcourtoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/27 00:16:22 by mcourtoi          #+#    #+#             */
-/*   Updated: 2023/05/27 11:47:14 by mcourtoi         ###   ########.fr       */
+/*   Created: 2023/05/26 23:49:50 by mcourtoi          #+#    #+#             */
+/*   Updated: 2023/05/27 12:54:36 by mcourtoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
-# include "Animal.hpp"
+# ifndef DEBUG
+#  define DEBUG 0
+# endif
 
-class Dog : public Animal
+# include <string>
+
+class Animal 
 {
+protected :
+
+	std::string	_type;
+
 public :
-
-	Dog(void);
-	Dog(std::string const &type);
-	Dog(Dog const &src);
-
-	~Dog(void);
-
+	
+	Animal(std::string const type);
+	Animal(Animal const &src);
+	Animal(void);
+	virtual ~Animal(void);
+	
+	std::string		get_type(void) const;
+	
+	void			set_type(std::string const type);
 	virtual void	makeSound(void) const;
 
-	Dog		&operator=(Dog const &src);
+	Animal			&operator=(Animal const &src);
 };
 
 #endif
