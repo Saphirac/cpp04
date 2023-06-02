@@ -6,7 +6,7 @@
 /*   By: mcourtoi <mcourtoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 00:16:22 by mcourtoi          #+#    #+#             */
-/*   Updated: 2023/05/27 11:47:09 by mcourtoi         ###   ########.fr       */
+/*   Updated: 2023/06/02 05:52:36 by mcourtoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public :
 	Cat(std::string const &type);
 	Cat(Cat const &src);
 
-	~Cat(void);
+	virtual	~Cat(void);
 
 	virtual void	makeSound(void) const;
 

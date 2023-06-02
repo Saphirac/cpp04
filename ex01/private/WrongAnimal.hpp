@@ -6,7 +6,7 @@
 /*   By: mcourtoi <mcourtoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 23:49:50 by mcourtoi          #+#    #+#             */
-/*   Updated: 2023/05/27 11:43:20 by mcourtoi         ###   ########.fr       */
+/*   Updated: 2023/06/02 05:58:02 by mcourtoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public :
 	WrongAnimal(std::string const type);
 	WrongAnimal(WrongAnimal const &src);
 	WrongAnimal(void);
-	~WrongAnimal(void);
+	virtual	~WrongAnimal(void);
 	
 	std::string	get_type(void) const;
 	

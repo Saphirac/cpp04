@@ -6,7 +6,7 @@
 /*   By: mcourtoi <mcourtoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 12:24:26 by mcourtoi          #+#    #+#             */
-/*   Updated: 2023/05/27 12:53:02 by mcourtoi         ###   ########.fr       */
+/*   Updated: 2023/06/02 05:57:50 by mcourtoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ public :
 
 	Brain(void);
 	Brain(Brain const &src);
-	~Brain(void);
+	virtual	~Brain(void);
 
 	Brain				&operator=(Brain const &src);
 

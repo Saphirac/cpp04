@@ -6,7 +6,7 @@
 /*   By: mcourtoi <mcourtoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 23:49:50 by mcourtoi          #+#    #+#             */
-/*   Updated: 2023/05/27 11:46:53 by mcourtoi         ###   ########.fr       */
+/*   Updated: 2023/06/02 05:53:21 by mcourtoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ public :
 	Animal(std::string const type);
 	Animal(Animal const &src);
 	Animal(void);
-	~Animal(void);
+
+	virtual	~Animal(void);
 	
 	std::string	get_type(void) const;
 	
