@@ -6,7 +6,7 @@
 /*   By: mcourtoi <mcourtoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 16:46:17 by mcourtoi          #+#    #+#             */
-/*   Updated: 2023/05/30 17:38:11 by mcourtoi         ###   ########.fr       */
+/*   Updated: 2023/06/02 04:03:57 by mcourtoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ public :
 	virtual	~AMateria(void);
 
 	std::string const	&get_type(void) const;
+
 	virtual AMateria	*clone(void) const = 0;
 	virtual void		use(ICharacter &target);
 

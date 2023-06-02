@@ -6,7 +6,7 @@
 /*   By: mcourtoi <mcourtoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:02:17 by mcourtoi          #+#    #+#             */
-/*   Updated: 2023/05/30 17:35:40 by mcourtoi         ###   ########.fr       */
+/*   Updated: 2023/06/02 05:08:51 by mcourtoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@
 class Ice : public AMateria
 {
 public:
-	Ice(std::string const &type);
+	Ice(void);
 	Ice(Ice const &src);
 
 	virtual	~Ice(void);
 
 	void	use(ICharacter &target);
 
-	AMateria	*clone(void) const;
+	Ice	*clone(void) const;
 
 	Ice	&operator=(Ice const &src);
 };

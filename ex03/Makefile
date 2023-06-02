@@ -6,7 +6,7 @@
 #    By: mcourtoi <mcourtoi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/24 23:20:21 by mcourtoi          #+#    #+#              #
-#    Updated: 2023/05/30 16:45:06 by mcourtoi         ###   ########.fr        #
+#    Updated: 2023/06/02 05:02:35 by mcourtoi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,15 +33,16 @@ PRV_DIR		=	private
 ######################################
 #            SOURCE FILES            #
 ######################################
-SRC			=						\
-				${addprefix class/,	\
-					AAnimal.cpp		\
-					Cat.cpp			\
-					Dog.cpp			\
-					WrongAnimal.cpp	\
-					WrongCat.cpp	\
-					Brain.cpp		\
-				}					\
+SRC			=							\
+				${addprefix class/,		\
+					AMateria.cpp		\
+					Character.cpp		\
+					Cure.cpp			\
+					Ice.cpp				\
+					ICharacter.cpp		\
+					IMateriaSource.cpp	\
+					MateriaSource.cpp	\
+				}						\
 				main.cpp
 
 ######################################

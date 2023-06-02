@@ -6,7 +6,7 @@
 /*   By: mcourtoi <mcourtoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:02:17 by mcourtoi          #+#    #+#             */
-/*   Updated: 2023/05/30 17:36:16 by mcourtoi         ###   ########.fr       */
+/*   Updated: 2023/06/02 05:08:17 by mcourtoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,13 @@
 class Cure : public AMateria
 {
 public:
-	Cure(std::string const &type);
+	Cure(void);
 	Cure(Cure const &src);
 
 	virtual	~Cure(void);
 
 	void	use(ICharacter &target);
-
-	AMateria	*clone(void) const;
+	Cure	*clone(void) const;
 
 	Cure	&operator=(Cure const &src);
 };

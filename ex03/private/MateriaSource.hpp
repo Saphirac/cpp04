@@ -6,7 +6,7 @@
 /*   By: mcourtoi <mcourtoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:51:29 by mcourtoi          #+#    #+#             */
-/*   Updated: 2023/05/30 18:00:00 by mcourtoi         ###   ########.fr       */
+/*   Updated: 2023/06/02 05:40:48 by mcourtoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "IMateriaSource.hpp"
 
-class MateriaSource
+class MateriaSource : public IMateriaSource
 {
 private:
 	
@@ -23,7 +23,7 @@ private:
 
 public:
 
-	MateriaSource();
+	MateriaSource(void);
 	MateriaSource(MateriaSource const &src);
 	
 	virtual	~MateriaSource();
